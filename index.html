@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Waqty — Prayer Times App | Coming Soon to App Store</title>
+  <meta name="description" content="Waqty helps you stay on time with your daily prayers. Get notified for every salah with smart alerts. Join the waitlist — coming soon to the App Store.">
+  <meta name="keywords" content="waqty, waqty app, prayer times, salah times, prayer app, islamic app, muslim prayer, adhan, athan, prayer reminder, salah reminder, prayer notification">
+  <meta name="author" content="Waqty">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://getwaqty.app">
+
+  <meta property="og:title" content="Waqty — Prayer Times App | Coming Soon">
+  <meta property="og:description" content="Stay on time with your prayers. Smart alerts for every salah. Join the waitlist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://getwaqty.app">
+  <meta property="og:image" content="https://getwaqty.app/assets/logo.png">
+  <meta property="og:site_name" content="Waqty">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Waqty — Prayer Times App | Coming Soon">
+  <meta name="twitter:description" content="Stay on time with your prayers. Smart alerts for every salah. Join the waitlist.">
+  <meta name="twitter:image" content="https://getwaqty.app/assets/logo.png">
+
+  <meta name="apple-mobile-web-app-title" content="Waqty">
+  <meta name="application-name" content="Waqty">
+  <meta name="theme-color" content="#5543FF">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Waqty",
+    "description": "Stay on time with your daily prayers. Smart alerts for every salah.",
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "price": "0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-vector">
+    <svg width="1440" height="790" viewBox="0 0 1440 790" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-37 751C119 784.833 471.5 809 633.5 635C836 417.5 852 230 859.5 115.5C867 1.00021 793.884 -269.85 633.5 -275.943C263.5 -290 114.722 72.7222 362 320C609.278 567.278 1029 757 1331 698C1572.6 650.8 1664.67 503.667 1680.5 436" stroke="white" stroke-opacity="0.1" stroke-width="28"/>
+    </svg>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="icon">
+        <img src="assets/logo.png" alt="Waqty app icon" width="64" height="64">
+      </div>
+      <h1>Waqty</h1>
+      <p class="subtitle">Soon Available on App Store</p>
+      <form id="waitlist-form">
+        <input
+          type="email"
+          id="email-input"
+          placeholder="name@email.com"
+          required
+          autocomplete="email"
+        >
+        <button type="submit" id="submit-btn">Notify me</button>
+      </form>
+      <p id="error-msg" class="error" hidden></p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="mailto:support@getwaqty.app">Support</a>
+    <a href="mailto:contact@getwaqty.app">Contact</a>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden>
+    <div class="toast">
+      You'll get a heads up when we launch. See you inside.
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
