@@ -33,7 +33,7 @@ form.addEventListener('submit', async (e) => {
   }
 
   submitBtn.disabled = true;
-  submitBtn.textContent = '...';
+  submitBtn.innerHTML = '<span class="spinner"></span>';
   errorMsg.hidden = true;
 
   try {
