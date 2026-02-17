@@ -1,17 +1,5 @@
-// ─── Supabase Config ───
-const SUPABASE_URL = 'https://spjlyhmgqtkcqhpvgxci.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNwamx5aG1ncXRrY3FocHZneGNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzYzODIsImV4cCI6MjA4MTIxMjM4Mn0.CJz-iTGuoKCmhRQc0vausUPPLR2341GL8JCncMk9i1k';
-
-// ─── Init Supabase client ───
-let db = null;
-try {
-  const { createClient } = window.supabase || {};
-  if (createClient) {
-    db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  }
-} catch (err) {
-  console.error('Supabase init failed:', err);
-}
+// ─── Config ───
+const EDGE_FN_URL = 'https://spjlyhmgqtkcqhpvgxci.supabase.co/functions/v1/waitlist-signup';
 
 // ─── Elements ───
 const form = document.getElementById('waitlist-form');
@@ -27,28 +15,27 @@ form.addEventListener('submit', async (e) => {
   const email = emailInput.value.toLowerCase().trim();
   if (!email) return;
 
-  if (!db) {
-    showError('Service unavailable. Try again later.');
-    return;
-  }
-
   submitBtn.disabled = true;
   submitBtn.innerHTML = '<span class="spinner"></span>';
   errorMsg.hidden = true;
 
   try {
-    const { error } = await db
-      .from('waitlist')
-      .insert({ email });
+    const res = await fetch(EDGE_FN_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
 
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Notify me';
+    submitBtn.textContent = 'Get early access';
 
-    if (error) {
-      if (error.code === '23505') {
-        showError("You're already on the list!");
+    if (!res.ok) {
+      if (data.code === 'DUPLICATE') {
+        showError("You've already signed up! Check your email for the link.");
       } else {
-        showError('Something went wrong. Try again.');
+        showError(data.error || 'Something went wrong. Try again.');
       }
       return;
     }
@@ -57,7 +44,7 @@ form.addEventListener('submit', async (e) => {
   } catch (err) {
     console.error('Submit error:', err);
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Notify me';
+    submitBtn.textContent = 'Get early access';
     showError('Something went wrong. Try again.');
   }
 });
