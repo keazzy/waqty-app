@@ -33,7 +33,7 @@ form.addEventListener('submit', async (e) => {
 
     if (!res.ok) {
       if (data.code === 'DUPLICATE') {
-        showError("You've already signed up! Check your email for the link.");
+        showError("You've already signed up! Check your email (or spam folder) for the link.");
       } else {
         showError(data.error || 'Something went wrong. Try again.');
       }
