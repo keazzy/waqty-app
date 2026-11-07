@@ -63,6 +63,14 @@
       margin-bottom: 8px;
     }
 
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
     p {
       font-size: 14px;
       margin-bottom: 16px;
@@ -83,54 +91,74 @@
   <div class="wrapper">
     <a href="/" class="back">&larr; Back to Waqty</a>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: February 9, 2026</p>
+    <p class="updated">Last updated: November 7, 2026</p>
 
-    <h2>Overview</h2>
-    <p>Waqty ("we", "our", "us") is an app designed to help you stay on time with your daily prayers and other important activities. We respect your privacy and are committed to protecting any personal information you share with us.</p>
+    <p>This policy explains what happens to your information when you use the Waqty app for iPhone and this website. Waqty is run by Abdulazeez Adeleke Balogun, trading as Waqty Labs ("we", "us").</p>
 
-    <h2>Information We Collect</h2>
-    <p>We collect minimal information necessary to operate the service:</p>
+    <h2>The short version</h2>
     <ul>
-      <li><strong>Email address</strong> — collected only when you voluntarily join our waitlist. Used solely to notify you when the app launches.</li>
-      <li><strong>Location data</strong> — when you use the app, your location is used to calculate accurate prayer times. This data is processed on your device and is not stored on our servers.</li>
-      <li><strong>Activity and reminder preferences</strong> — any reminders or schedules you set within the app are stored locally on your device.</li>
+      <li>Waqty has no accounts, and the app never asks for your name or email.</li>
+      <li>Your settings and prayer times stay on your iPhone.</li>
+      <li>Your location is used to work out prayer times and weather. We don't receive or store it.</li>
+      <li>There are no ads, we don't sell your data, and we don't track you across other companies' apps or websites.</li>
     </ul>
 
-    <h2>How We Use Your Information</h2>
+    <h2>Information the app uses</h2>
+
+    <h3>Location</h3>
+    <p>With your permission, Waqty uses your precise location while you're using the app. It's used to calculate prayer times for where you are, notice when you've travelled, and show local weather. Your last location is saved on your iPhone. To provide these features, your coordinates are sent directly from your iPhone to:</p>
     <ul>
-      <li>To send you a one-time launch notification if you joined the waitlist.</li>
-      <li>To calculate prayer times based on your location (on-device only).</li>
-      <li>To deliver reminders for prayers and other activities you configure.</li>
+      <li><a href="https://aladhan.com" target="_blank" rel="noopener">AlAdhan</a>, which returns prayer times.</li>
+      <li><a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>, which returns the weather.</li>
+    </ul>
+    <p>Those requests don't include your name or any account details. Like any web service, these providers can also see your IP address. You can turn off location access at any time in iOS Settings.</p>
+
+    <h3>Notifications</h3>
+    <p>Prayer alarms and reminders are scheduled on your iPhone. We also use <a href="https://onesignal.com" target="_blank" rel="noopener">OneSignal</a> to send push notifications and in-app messages, such as news about the app. When you use Waqty, OneSignal receives:</p>
+    <ul>
+      <li>a push token and a OneSignal ID, which identify your device but not you by name</li>
+      <li>device details: model, iOS version, language, time zone, country, mobile carrier and app version</li>
+      <li>your IP address</li>
+      <li>whether notifications are allowed, and usage details such as when and how long you use the app</li>
+    </ul>
+    <p>We don't share your GPS location with OneSignal. You can turn off notifications in iOS Settings, and deleting the app stops this collection.</p>
+
+    <h3>App content and updates</h3>
+    <p>Waqty downloads its What's New content from our <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> backend and checks Apple's App Store for new versions. These requests don't include personal details, though the services can see your IP address as part of handling them.</p>
+
+    <h3>Information stored only on your iPhone</h3>
+    <p>Your settings, alarm choices, cached prayer times and widget data stay on your device and aren't sent to us. Deleting the app removes them.</p>
+
+    <h3>Religious belief</h3>
+    <p>We don't ask for your religion or keep a record of it, and the app doesn't send us information about your prayers. Using a prayer times app could suggest something about your beliefs, and we don't use your data to draw that conclusion.</p>
+
+    <h2>Links that open outside the app</h2>
+    <p>Coming Soon, Suggest a Feature and the Help Center open in Safari on a site run by <a href="https://www.featurebase.app" target="_blank" rel="noopener">Featurebase</a>. Anything you post there is covered by Featurebase's own terms and may be visible to other people. If you email us for support, we receive your email address and whatever you write, and use them only to reply.</p>
+
+    <h2>Our website and waitlist</h2>
+    <ul>
+      <li><strong>Waitlist:</strong> if you join, we store your email address with Supabase and use <a href="https://resend.com" target="_blank" rel="noopener">Resend</a> to send you early access and launch emails. We keep it until you ask us to remove it or we no longer need it for those emails.</li>
+      <li><strong>Site statistics:</strong> we use Vercel Web Analytics to count visits. It doesn't use cookies. The site is hosted by <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>.</li>
+      <li><strong>Fonts:</strong> the site loads fonts from Google Fonts, so Google can see your IP address.</li>
     </ul>
 
-    <h2>Data Storage</h2>
-    <p>Waitlist email addresses are stored securely using <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, a trusted cloud database provider. We do not sell, rent, or share your email address with any third parties.</p>
+    <h2>How we use information</h2>
+    <p>We use it to provide the features above, deliver notifications, understand in general how the app is used, and keep it working. We don't use it for advertising and we don't sell it. Where the law requires a legal basis, we rely on your consent (location, notifications and the waitlist) and on our legitimate interest in running and improving Waqty.</p>
 
-    <h2>Cookies and Tracking</h2>
-    <p>Our website does not use cookies, analytics, or any tracking technologies.</p>
+    <h2>Keeping and sharing information</h2>
+    <p>We share information only with the service providers named in this policy, or when the law requires it. These providers may process data in other countries, and each keeps it according to its own policy. We keep what we hold only for as long as we need it for the purposes above.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>We do not share your personal data with any third-party services for marketing or advertising purposes.</p>
+    <h2>Your rights</h2>
+    <p>Depending on where you live, you may have the right to access, correct or delete your personal data, to object to or limit how it's used, to withdraw consent, and to complain to your local data protection authority. To make a request, contact us at the address below. Because the app has no accounts, we may need details from you to find any data related to your device.</p>
 
-    <h2>Data Retention</h2>
-    <p>Waitlist emails are retained until the app launches and the notification is sent. You may request deletion of your email at any time by contacting us.</p>
+    <h2>Children</h2>
+    <p>Waqty is suitable for all ages but isn't designed specifically for children. We don't knowingly collect personal information from children under 13. If you think a child has given us personal information, such as by joining the waitlist, contact us and we'll delete it.</p>
 
-    <h2>Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li>Request access to the personal data we hold about you.</li>
-      <li>Request deletion of your personal data.</li>
-      <li>Withdraw consent at any time.</li>
-    </ul>
-
-    <h2>Children's Privacy</h2>
-    <p>Our service is not directed to children under 13. We do not knowingly collect personal information from children.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we'll post the new version here and update the date at the top.</p>
 
     <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:support@getwaqty.app">support@getwaqty.app</a>.</p>
+    <p>Questions or requests: <a href="mailto:support@getwaqty.app">support@getwaqty.app</a>.</p>
   </div>
 </body>
 </html>
