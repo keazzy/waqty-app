@@ -4,38 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Waqty — Prayer Times App | Coming Soon to App Store</title>
-  <meta name="description" content="Waqty helps you stay on time with your daily prayers and important activities. Smart reminders for every salah and more. Join the waitlist — coming soon to the App Store.">
-  <meta name="keywords" content="waqty, waqty app, prayer times, salah times, prayer app, islamic app, muslim prayer, adhan, athan, prayer reminder, salah reminder, prayer notification, activity reminder, daily routine, muslim daily planner">
-  <meta name="author" content="Waqty">
+  <title>Waqty: Prayer Times and Alarms for iPhone</title>
+  <meta name="description" content="Waqty is a free prayer times app for iPhone. Alarms that ring through silent mode, the next prayer on your Lock Screen, and home screen widgets.">
+  <meta name="keywords" content="waqty, waqty app, prayer times, salah times, prayer app, islamic app, muslim prayer, adhan, athan, prayer alarm, salah reminder, prayer widget, iphone prayer app">
+  <meta name="author" content="Waqty Labs">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://getwaqty.app">
+  <link rel="canonical" href="https://www.getwaqty.app/">
 
-  <meta property="og:title" content="Waqty — Prayer Times App | Coming Soon">
-  <meta property="og:description" content="Stay on time with your prayers. Smart alerts for every salah. Join the waitlist.">
+  <meta name="apple-itunes-app" content="app-id=6757971613">
+
+  <meta property="og:title" content="Waqty: Prayer Times and Alarms for iPhone">
+  <meta property="og:description" content="Prayer times that keep you on time. Free on the App Store.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://getwaqty.app">
-  <meta property="og:image" content="https://getwaqty.app/assets/logo.png">
+  <meta property="og:url" content="https://www.getwaqty.app/">
+  <meta property="og:image" content="https://www.getwaqty.app/assets/logo.png">
   <meta property="og:site_name" content="Waqty">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Waqty — Prayer Times App | Coming Soon">
-  <meta name="twitter:description" content="Stay on time with your prayers. Smart alerts for every salah. Join the waitlist.">
-  <meta name="twitter:image" content="https://getwaqty.app/assets/logo.png">
+  <meta name="twitter:title" content="Waqty: Prayer Times and Alarms for iPhone">
+  <meta name="twitter:description" content="Prayer times that keep you on time. Free on the App Store.">
+  <meta name="twitter:image" content="https://www.getwaqty.app/assets/logo.png">
 
   <meta name="apple-mobile-web-app-title" content="Waqty">
   <meta name="application-name" content="Waqty">
-  <meta name="theme-color" content="#5543FF">
+  <meta name="theme-color" content="#3378D6">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
+
+  <!-- Sets the sky and the theme before the page first paints. -->
+  <script src="sky.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
 
   <script type="application/ld+json">
@@ -43,32 +47,158 @@
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Waqty",
-    "description": "Stay on time with your daily prayers and important activities. Smart reminders for every salah and more.",
-    "operatingSystem": "iOS",
+    "description": "A free prayer times app for iPhone. Alarms that ring through silent mode, the next prayer on your Lock Screen, and home screen widgets.",
+    "operatingSystem": "iOS 26",
     "applicationCategory": "LifestyleApplication",
+    "installUrl": "https://apps.apple.com/app/id6757971613",
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/PreOrder",
-      "price": "0"
+      "availability": "https://schema.org/InStock",
+      "price": "0",
+      "priceCurrency": "USD"
     }
   }
   </script>
 </head>
 <body>
-  <div class="bg-vector">
-    <svg width="1440" height="790" viewBox="0 0 1440 790" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M-37 751C119 784.833 471.5 809 633.5 635C836 417.5 852 230 859.5 115.5C867 1.00021 793.884 -269.85 633.5 -275.943C263.5 -290 114.722 72.7222 362 320C609.278 567.278 1029 757 1331 698C1572.6 650.8 1664.67 503.667 1680.5 436" stroke="white" stroke-opacity="0.1" stroke-width="28"/>
-    </svg>
-  </div>
+  <header class="nav">
+    <a class="nav-brand" href="/" aria-label="Waqty home">
+      <img src="assets/logo.png" alt="" width="32" height="32">
+      <span>Waqty</span>
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/>
+        </svg>
+      </button>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6757971613">Download the app</a>
+    </div>
+  </header>
 
   <main>
-    <div class="container">
-      <div class="icon">
-        <img src="assets/logo.png" alt="Waqty app icon" width="64" height="64">
+    <section class="hero">
+      <!-- The sky from the app's Home screen. It follows the visitor's time of day. Decorative. -->
+      <div class="sky" aria-hidden="true">
+        <canvas class="stars"></canvas>
+        <div class="clouds clouds-far"></div>
+        <div class="clouds clouds-near"></div>
       </div>
-      <h1>Waqty</h1>
-      <p class="subtitle">Available on iOS 26 · Android coming soon</p>
+
+      <!-- The sun's path across the day. Decorative. -->
+      <svg class="sun-arc" viewBox="0 0 1200 620" fill="none" aria-hidden="true">
+        <path d="M100 600A500 500 0 0 1 1100 600" stroke="currentColor" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <g class="arc-dots">
+          <circle cx="130" cy="429" r="7"/>
+          <circle cx="389" cy="147" r="7"/>
+          <circle cx="811" cy="147" r="7"/>
+          <circle cx="1070" cy="429" r="7"/>
+        </g>
+      </svg>
+
+      <img class="hero-icon reveal" src="assets/logo.png" alt="Waqty app icon" width="112" height="112">
+      <h1 class="reveal">Prayer times that<br>keep you on time.</h1>
+      <p class="subtitle reveal">Free on iPhone. Android in beta.</p>
+      <div class="hero-actions reveal">
+        <a class="cta" href="https://apps.apple.com/app/id6757971613">Download on the App Store</a>
+        <a class="cta cta-quiet" href="#android">Join the Android beta</a>
+      </div>
+      <p class="fine-print reveal">iPhone app requires iOS 26.</p>
+    </section>
+
+    <section class="features" aria-label="What Waqty does">
+      <ul class="bento">
+        <li class="card card-head rise">
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/home.webp" alt="The Waqty Home screen listing Fajr, Dhuhr, Asr, Maghrib and Isha with their times" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="card-text">
+            <h2>Prayer times for<br>where you are.</h2>
+            <p>Waqty works out the times for your location.</p>
+          </div>
+        </li>
+        <li class="card card-tail rise">
+          <div class="card-text">
+            <h2>Alarms that ring<br>through silent.</h2>
+            <p>Your iPhone can be on silent. The alarm still rings.</p>
+          </div>
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/alarm.webp" alt="A Waqty alarm ringing for Asr on a locked iPhone" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="card card-tail rise">
+          <div class="card-text">
+            <h2>Your sound,<br>your adhan.</h2>
+            <p>Choose from a set of alarm sounds and adhans.</p>
+          </div>
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/alerts.webp" alt="The sound setting in Waqty, with a notification sound chosen and an intensity for each prayer" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="card card-head rise">
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/live-activity.webp" alt="An iPhone Lock Screen with a Waqty Live Activity counting down to Fajr" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="card-text">
+            <h2>The next prayer,<br>on your Lock Screen.</h2>
+            <p>A Live Activity keeps it in view.</p>
+          </div>
+        </li>
+        <li class="card card-head rise">
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/lock-screen.webp" alt="An iPhone Lock Screen with two Waqty widgets showing the time left until Fajr" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="card-text">
+            <h2>Widgets for Home<br>and Lock Screen.</h2>
+            <p>See the next prayer without opening the app.</p>
+          </div>
+        </li>
+        <li class="card card-tail rise">
+          <div class="card-text">
+            <h2>A sky that matches<br>the weather.</h2>
+            <p>The Home screen shows a live sky for the weather outside.</p>
+          </div>
+          <div class="phone">
+            <div class="device">
+              <img class="shot" src="assets/screens/home.webp" alt="The Waqty Home screen with the time over a night sky with stars" width="640" height="1392" loading="lazy" decoding="async">
+              <img class="frame" src="assets/screens/iphone-frame.webp" alt="" width="720" height="1470" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="closing rise">
+      <img src="assets/logo.png" alt="" width="72" height="72">
+      <h2>Free. No ads.<br>No account.</h2>
+      <p>The app never asks for your name or email. <a href="/privacy.html">Read the privacy policy</a></p>
+      <a class="cta" href="https://apps.apple.com/app/id6757971613">Download on the App Store</a>
+    </section>
+
+    <section class="android rise" id="android" aria-labelledby="android-title">
+      <h2 id="android-title">Android is in beta.</h2>
+      <p>Leave your email to join the beta. We will also tell you when it is released.</p>
       <form id="waitlist-form">
+        <label class="visually-hidden" for="email-input">Email address</label>
         <input
           type="email"
           id="email-input"
@@ -76,21 +206,26 @@
           required
           autocomplete="email"
         >
-        <button type="submit" id="submit-btn">Get early access</button>
+        <button type="submit" id="submit-btn">Join the beta</button>
       </form>
-      <p id="error-msg" class="error" hidden></p>
-    </div>
+      <p id="error-msg" class="error" role="alert" hidden></p>
+    </section>
   </main>
 
   <footer>
-    <a href="mailto:support@getwaqty.app">Support</a>
-    <a href="mailto:contact@getwaqty.app">Contact</a>
-    <a href="/privacy.html">Privacy</a>
+    <p class="footer-brand">Waqty</p>
+    <nav aria-label="Footer">
+      <a href="mailto:support@getwaqty.app">Support</a>
+      <a href="mailto:contact@getwaqty.app">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-legal">© 2026 Waqty Labs</p>
   </footer>
 
   <div id="overlay" class="overlay" hidden>
-    <div class="toast">
-      We've sent an early access link to your email. If you don't see it, check your spam folder. The app is currently available on <strong>iOS 26</strong> — we're working on supporting older versions and Android soon.
+    <div class="toast" role="status">
+      <p id="toast-msg">You are on the list. Opening the Android beta.</p>
+      <a id="beta-link" href="https://appdistribution.firebase.dev/i/60bf93f648c7dc76" rel="noopener">Open it now</a>
     </div>
   </div>
 
