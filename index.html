@@ -41,6 +41,7 @@
   <!-- Sets the sky and the theme before the page first paints. -->
   <script src="sky.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="analytics.js"></script>
 
   <script type="application/ld+json">
   {
@@ -76,7 +77,7 @@
           <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/>
         </svg>
       </button>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6757971613">Download the app</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6757971613" data-track="app_store_click" data-placement="nav">Download the app</a>
     </div>
   </header>
 
@@ -104,8 +105,8 @@
       <h1 class="reveal">Prayer times that<br>keep you on time.</h1>
       <p class="subtitle reveal">Free on iPhone. Android in beta.</p>
       <div class="hero-actions reveal">
-        <a class="cta" href="https://apps.apple.com/app/id6757971613">Download on the App Store</a>
-        <a class="cta cta-quiet" href="#android">Join the Android beta</a>
+        <a class="cta" href="https://apps.apple.com/app/id6757971613" data-track="app_store_click" data-placement="hero">Download on the App Store</a>
+        <a class="cta cta-quiet" href="#android" data-track="android_beta_link_click" data-placement="hero">Join the Android beta</a>
       </div>
       <p class="fine-print reveal">iPhone app requires iOS 26.</p>
     </section>
@@ -191,7 +192,7 @@
       <img src="assets/logo.png" alt="" width="72" height="72">
       <h2>Free. No ads.<br>No account.</h2>
       <p>The app never asks for your name or email. <a href="/privacy.html">Read the privacy policy</a></p>
-      <a class="cta" href="https://apps.apple.com/app/id6757971613">Download on the App Store</a>
+      <a class="cta" href="https://apps.apple.com/app/id6757971613" data-track="app_store_click" data-placement="closing">Download on the App Store</a>
     </section>
 
     <section class="android rise" id="android" aria-labelledby="android-title">
@@ -202,6 +203,7 @@
         <input
           type="email"
           id="email-input"
+          class="ph-no-capture"
           placeholder="name@email.com"
           required
           autocomplete="email"

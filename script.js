@@ -20,6 +20,13 @@ const frostNav = () => nav.classList.toggle('scrolled', window.scrollY > 8);
 frostNav();
 window.addEventListener('scroll', frostNav, { passive: true });
 
+// ─── Statistics: count presses of the links marked with data-track ───
+const track = (name, props) => { if (window.waqtyTrack) window.waqtyTrack(name, props); };
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-track]');
+  if (link) track(link.dataset.track, { placement: link.dataset.placement });
+});
+
 // ─── Light and dark: the toggle plays the sky through to night, or back ───
 const themeToggle = document.querySelector('.theme-toggle');
 const labelToggle = () => {
@@ -30,6 +37,7 @@ if (themeToggle && window.waqtySky) {
   themeToggle.addEventListener('click', () => {
     window.waqtySky.toggle();
     labelToggle();
+    track('theme_toggle', { to: window.waqtySky.isDark() ? 'dark' : 'light' });
   });
 }
 
@@ -110,14 +118,19 @@ form.addEventListener('submit', async (e) => {
 
     // Someone already on the list still gets taken to the beta.
     if (!res.ok && data.code === 'DUPLICATE') {
+      track('android_beta_signup', { result: 'already_joined' });
       showSuccess('You are already on the list. Opening the Android beta.');
       return;
     }
 
     if (!res.ok) {
+      track('android_beta_signup', { result: 'error' });
       showError(data.error || 'Something went wrong. Try again.');
       return;
     }
+
+    // The email itself is never sent to the statistics.
+    track('android_beta_signup', { result: 'joined' });
 
     showSuccess('You are on the list. Opening the Android beta.');
   } catch (err) {
